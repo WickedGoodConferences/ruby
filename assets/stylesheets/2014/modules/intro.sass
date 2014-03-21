@@ -62,3 +62,56 @@
     font-size: 60px
     color: $yellow
     color: rgba($yellow, .75)
+
+.intro__archive-link-wrap
+  @media (max-width: 429px)
+    display: none
+  @media (min-width: 430px)
+    +transition-duration(.25s)
+    +transition-property(margin-left)
+    margin-left: -10px
+    position: absolute
+    top: 0
+    height: 120px
+    width: 60px
+    background-color: $black
+    &:before
+      +transition-duration(.25s)
+      +transition-property(color)
+      position: absolute
+      top: 50px
+      right: 30px
+      font-family: 'icomoon'
+      content: '<'
+      color: $white
+
+    &:hover
+      margin-left: 0
+      &:before, .intro__archive-link
+        color: $yellow
+
+    @media (max-width: 599px)
+      margin-top: 50px
+    @media (min-width: 600px) and (max-width: 799px)
+      margin-top: 110px
+    @media (min-width: 800px) and (max-width: 1119px)
+      margin-top: 150px
+    @media (min-width: 1120px)
+      margin-top: 210px
+    // fix for wide and short browser sizes
+    @media (min-width: 1120px) and (max-height: 600px)
+      margin-top: 150px
+
+.intro__archive-link
+  @media (min-width: 430px)
+    +box-sizing(border-box)
+    +transition-duration(.25s)
+    +transition-property(color)
+    position: absolute
+    top: 21px
+    right: 15px
+    width: 10px
+    text-align: center
+    line-height: 1.25
+    color: $white
+    word-break: break-all
