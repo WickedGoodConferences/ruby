@@ -14,14 +14,7 @@
     %nav.top-nav
       .top-nav__item--logo{aria: {hidden: "true"}, data: {icon: "⌂"}}
         %span.for-screen-reader Wicked Good Conferences
-      %a.top-nav__item--club-sandwich{href: "#", aria: {hidden: "true"}, data: {icon: "☰"}}
-        %span.for-screen-reader Navigation
-      %a.top-nav__item--close-nav{href: "#", aria: {hidden: "true"}, data: {icon: "x"}}
-        %span.for-screen-reader Close Navigation
-      .top-nav__items
-        %a.top-nav__item{href: "/"} Home
-        %a.top-nav__item{href: "/schedule"} Schedule
-        %a.top-nav__item{href: "", target: "_blank"} Register
+      %a.top-nav__item{href: "", target: "_blank"} Register
 
     %section.main
       = yield
