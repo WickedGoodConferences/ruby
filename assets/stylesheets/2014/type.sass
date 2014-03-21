@@ -1,0 +1,75 @@
+@import 2014/load
+
+@mixin has-lines($line-color)
+  &:before, &:after
+    border-bottom-color: $line-color
+
+%has-lines
+  position: relative
+  &:before, &:after
+    position: absolute
+    height: 5px
+    width: 250px
+    border-bottom:
+      width: 1px
+      style: solid
+    content: ""
+  &:before
+    margin-right: 25px
+    right: 100%
+  &:after
+    margin-left: 25px
+    left: 100%
+
+.subheader--black, .subheader--white
+  @extend %has-lines
+
+.subheader--black
+  @include has-lines($black)
+
+.subheader--white
+  @include has-lines($white)
+
+.text-link
+  font-style: italic
+  color: $red
+
+.is-superscript
+  font-size: 60%
+  vertical-align: super
+
+.for-screen-reader
+  position: absolute
+  left: -9999px
+
+.text-divider
+  margin-top: -28px
+  padding:
+    left: 6px
+    right: 16px
+  display: inline-block
+  position: relative
+  top: 8px
+  font:
+    weight: 100
+    size: 46px
+  letter-spacing: -10px
+
+  .location-section &, .schedule-section &, .speaker-detail-section &, .speaker-detail__nav &
+    color: $l-gray
+
+  .speaker-detail__nav &
+    top: 6px
+    font-size: 28px
+    letter-spacing: -4px
+
+.subheader-wrap
+  margin:
+    right: auto
+    left: auto
+  width: 250px
+  overflow: hidden
+
+.subheader-has-lines
+  margin-bottom: 30px
+  display: block
