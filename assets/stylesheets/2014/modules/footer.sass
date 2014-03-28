@@ -1,14 +1,14 @@
 @import 2014/load
 
 footer
-  padding-bottom: 60px
+  padding-bottom: 120px
   background-color: $black
   @media (max-width: 749px)
     padding-top: 50px
   @media (min-width: 750px)
     padding-top: 75px
 
-.footer__sponsors, .footer__link
+.footer__sponsors, .footer__link, .footer__archive
   margin:
     right: auto
     left: auto
@@ -22,8 +22,24 @@ footer
   @media (min-width: 750px)
     padding-bottom: 120px
 
+.footer__archive
+  padding:
+    top: 16px
+    bottom: 16px
+  max-width: 785px
+  border-bottom: 1px solid $gray
+  text-align: center
+  color: $gray
+
+.footer__archive-link
+  +transition-duration(.25s)
+  +transition-property(color)
+  color: $gray
+  &:hover
+    color: $white
+
 .footer__link
-  margin-top: 30px
+  margin-top: 60px
   width: 210px
   display: block
   text-align: center
