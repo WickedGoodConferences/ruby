@@ -55,6 +55,7 @@
 
 .top-nav__item
   float: right
+  border-left: 1px solid lighten($black, 10%)
   font-size: 12px
   text-transform: uppercase
   color: $yellow
@@ -65,8 +66,9 @@
 
   @media (max-width: 599px)
     +box-sizing(border-box)
-    padding: 18px 5%
-    border:
+    //padding: 18px 5%
+    padding: 19px 5%
+    //border:
       top: 1px solid lighten($black, 10%)
       bottom: 1px solid darken($black, 10%)
     &:last-child
@@ -76,12 +78,25 @@
       top: 24px
       bottom: 24px
     text-align: center
-    &:not(:first-child)
-      border-left: 1px solid lighten($black, 10%)
-    &:not(:last-child)
-      border-right: 1px solid darken($black, 10%)
+    //&:not(:first-child)
+      //border-left: 1px solid lighten($black, 10%)
+    //&:not(:last-child)
+      //border-right: 1px solid darken($black, 10%)
 
   @media (min-width: 600px) and (max-width: 1199px)
     width: 140px
   @media (min-width: 1200px)
     width: 180px
+
+.top-nav__social
+  float: right
+  &:before
+    +transition-duration(.25s)
+    +transition-property(color)
+    color: $white
+  &:hover:before
+    color: $yellow
+  @media (max-width: 599px)
+    padding: 16px
+  @media (min-width: 600px)
+    padding: 20px 26px
