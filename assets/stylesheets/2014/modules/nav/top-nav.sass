@@ -55,7 +55,9 @@
 
 .top-nav__item
   float: right
-  border-left: 1px solid lighten($black, 10%)
+  border:
+    right: 1px solid darken($black, 10%)
+    left: 1px solid lighten($black, 10%)
   font-size: 12px
   text-transform: uppercase
   color: $yellow
@@ -90,6 +92,7 @@
 
 .top-nav__social
   float: right
+  border-left: 1px solid lighten($black, 10%)
   &:before
     +transition-duration(.25s)
     +transition-property(color)
